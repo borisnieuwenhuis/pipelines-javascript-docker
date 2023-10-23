@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: borisnieuwenhuispipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: borisnieuwenhuispipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: borisnieuwenhuispipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: borisnieuwenhuispipelinesjavascriptdocker 
+          image: boriscontainerregistry.azurecr.io/borisnieuwenhuispipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
